@@ -121,3 +121,15 @@ test('removeFromOrganization: sends the correct request', (t) => {
       })
     })
 })
+test('createcOMPANY: sends the correct request', (t) => {
+  return stelace.users.createCompany({ companyName: 'delta', companyEmail: 'delta@deltacom', companyPhoneNumber: '25100300', address: '10,Maritime Street', country: 'Tunisia', description: 'bla', firstname: 'ahmed', lastname: 'Ben', email: 'ahmed@ben.com', username: 'ahmedben', displayName: 'Ahmed Ben', phoneNumber: '223456789' })
+    .then(() => {
+      t.deepEqual(stelace.LAST_REQUEST, {
+        method: 'POST',
+        path: '/users/companycreate',
+        data: { companyName: 'delta', companyEmail: 'delta@deltacom', companyPhoneNumber: '25100300', address: '10,Maritime Street', country: 'Tunisia', description: 'bla', firstname: 'ahmed', lastname: 'Ben', email: 'ahmed@ben.com', username: 'ahmedben', displayName: 'Ahmed Ben', phoneNumber: '223456789' },
+        queryParams: {},
+        headers: {}
+      })
+    })
+})

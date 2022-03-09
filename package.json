@@ -1,7 +1,7 @@
 {
-  "name": "stelace",
-  "version": "0.14.0",
-  "description": "Server and front-end client for Stelace API",
+  "name": "podyam_stelace",
+  "version": "0.15.7",
+  "description": "Server and front-end client for Podyam-Stelace API",
   "main": "dist/stelace.node.js",
   "module": "dist/es-modules/stelace.js",
   "jsnext:main": "dist/es-modules/stelace.js",
@@ -9,15 +9,16 @@
     "prepare": "husky install",
     "clean": "rimraf dist",
     "build": "npm run clean && npm run build:modules && npm run build:standalone",
-    "build:modules": "BABEL_ENV=modules babel lib -d dist/es-modules/",
-    "build:standalone": "NODE_ENV=development webpack && NODE_ENV=production webpack",
+    "build:modules": " cross-env BABEL_ENV=modules babel lib -d dist/es-modules/",
+    "build:standalone": "cross-env NODE_ENV=development webpack && cross-env NODE_ENV=production webpack",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "BABEL_ENV=test node ./test/runner | tap-spec",
     "test:ci": "BABEL_ENV=test node ./test/runner | tap-xunit",
     "test:browser-local": "BABEL_ENV=test karma start karma.conf.local.js",
     "test:prepush": "npm run build && npm run test",
-    "release": "standard-version"
+    "release": "standard-version",
+    "refreshVSToken": "vsts-npm-auth -config .npmrc"
   },
   "author": "Stelace Team",
   "license": "MIT",
@@ -40,11 +41,14 @@
     "dist"
   ],
   "dependencies": {
+    "@babel/node": "^7.16.8",
     "@babel/runtime": "^7.8.3",
     "axios": "^0.21.1",
     "core-js": "^3.0.0",
+    "cross-env": "^7.0.3",
     "jwt-decode": "^3.0.0",
-    "localstorage-memory": "^1.0.2"
+    "localstorage-memory": "^1.0.2",
+    "podyam_stelace": "^0.14.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -67,7 +71,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^6.0.0",
+    "husky": "6",
     "jsonwebtoken": "^8.3.0",
     "karma": "^6.0.3",
     "karma-chrome-launcher": "^3.1.0",
