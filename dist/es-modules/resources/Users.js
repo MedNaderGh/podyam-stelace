@@ -69,3 +69,15 @@ Users.prototype.fetchUserFile = method({
   path: '/users/fetchuserfile',
   method: 'POST'
 });
+Users.prototype.fetchUserCompany = method({
+  path: '/users/fetchusercompany',
+  method: 'POST'
+});
+Users.prototype.verifyPassword = method({
+  path: '/users/verifypassword',
+  method: 'POST'
+});
+Users.prototype.updateUser = method({
+  path: '/users/updateuser',
+  method: 'POST'
+});

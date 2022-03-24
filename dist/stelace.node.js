@@ -5318,6 +5318,18 @@ Users.prototype.fetchUserFile = method({
   path: '/users/fetchuserfile',
   method: 'POST'
 });
+Users.prototype.fetchUserCompany = method({
+  path: '/users/fetchusercompany',
+  method: 'POST'
+});
+Users.prototype.verifyPassword = method({
+  path: '/users/verifypassword',
+  method: 'POST'
+});
+Users.prototype.updateUser = method({
+  path: '/users/updateuser',
+  method: 'POST'
+});
 
 /***/ }),
 
@@ -5622,7 +5634,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.15.6";
+Stelace.PACKAGE_VERSION = "0.15.10";
 Stelace.USER_AGENT_STRING = `Stelace/${Stelace.PACKAGE_VERSION}`;
 const createInstance = (...args) => {
   return new Stelace(...args);
