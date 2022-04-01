@@ -7362,6 +7362,7 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 
+var method = _Resource__WEBPACK_IMPORTED_MODULE_7__["default"].method;
 
 var Assets = /*#__PURE__*/function (_Resource) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Assets, _Resource);
@@ -7381,6 +7382,30 @@ var Assets = /*#__PURE__*/function (_Resource) {
 _Resource__WEBPACK_IMPORTED_MODULE_7__["default"].addBasicMethods(Assets, {
   path: '/assets',
   includeBasic: ['list', 'read', 'create', 'update', 'remove']
+});
+Assets.prototype.getAMFClassification = method({
+  path: '/amfclassification',
+  method: 'GET'
+});
+Assets.prototype.getCategories = method({
+  path: '/fundcategories',
+  method: 'GET'
+});
+Assets.prototype.getCurrencies = method({
+  path: '/currencies',
+  method: 'GET'
+});
+Assets.prototype.getFundtypes = method({
+  path: '/fundtypes',
+  method: 'GET'
+});
+Assets.prototype.getInvestementtypes = method({
+  path: '/investementtypes',
+  method: 'GET'
+});
+Assets.prototype.getManagementmethodes = method({
+  path: '/managementmethodes',
+  method: 'GET'
 });
 
 /***/ }),
@@ -9530,7 +9555,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.16.1";
+Stelace.PACKAGE_VERSION = "0.16.2";
 Stelace.USER_AGENT_STRING = "Stelace/".concat(Stelace.PACKAGE_VERSION);
 var createInstance = function createInstance() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {

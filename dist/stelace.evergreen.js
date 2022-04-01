@@ -5014,10 +5014,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Assets; });
 /* harmony import */ var _Resource__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Resource */ "./Resource.js");
 
+const method = _Resource__WEBPACK_IMPORTED_MODULE_0__["default"].method;
 class Assets extends _Resource__WEBPACK_IMPORTED_MODULE_0__["default"] {}
 _Resource__WEBPACK_IMPORTED_MODULE_0__["default"].addBasicMethods(Assets, {
   path: '/assets',
   includeBasic: ['list', 'read', 'create', 'update', 'remove']
+});
+Assets.prototype.getAMFClassification = method({
+  path: '/amfclassification',
+  method: 'GET'
+});
+Assets.prototype.getCategories = method({
+  path: '/fundcategories',
+  method: 'GET'
+});
+Assets.prototype.getCurrencies = method({
+  path: '/currencies',
+  method: 'GET'
+});
+Assets.prototype.getFundtypes = method({
+  path: '/fundtypes',
+  method: 'GET'
+});
+Assets.prototype.getInvestementtypes = method({
+  path: '/investementtypes',
+  method: 'GET'
+});
+Assets.prototype.getManagementmethodes = method({
+  path: '/managementmethodes',
+  method: 'GET'
 });
 
 /***/ }),
@@ -6055,7 +6080,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.16.1";
+Stelace.PACKAGE_VERSION = "0.16.2";
 Stelace.USER_AGENT_STRING = "Stelace/".concat(Stelace.PACKAGE_VERSION);
 const createInstance = function () {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
