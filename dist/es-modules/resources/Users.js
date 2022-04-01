@@ -81,3 +81,13 @@ Users.prototype.updateUser = method({
   path: '/users/updateuser',
   method: 'POST'
 });
+Users.prototype.getUserDocs = method({
+  path: '/users/getUserDocs/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.deleteUserDocs = method({
+  path: '/users/deleteUserDocs/:id',
+  method: 'DELETE',
+  urlParams: ['id']
+});
