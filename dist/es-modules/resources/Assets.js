@@ -56,3 +56,7 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
+Assets.prototype.getFunds = method({
+  path: '/funds',
+  method: 'GET'
+});

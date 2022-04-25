@@ -4640,6 +4640,10 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
+Assets.prototype.getFunds = method({
+  path: '/funds',
+  method: 'GET'
+});
 
 /***/ }),
 
@@ -5669,7 +5673,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.16.2";
+Stelace.PACKAGE_VERSION = "0.16.3";
 Stelace.USER_AGENT_STRING = `Stelace/${Stelace.PACKAGE_VERSION}`;
 const createInstance = (...args) => {
   return new Stelace(...args);
