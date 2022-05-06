@@ -7407,10 +7407,13 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
+<<<<<<< HEAD
 Assets.prototype.getLabels = method({
   path: '/label',
   method: 'GET'
 });
+=======
+>>>>>>> 96e66b9b151d086cd6b4a4a2709c0cdff68a3a32
 Assets.prototype.getFunds = method({
   path: '/funds',
   method: 'GET'
@@ -9583,7 +9586,11 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
+<<<<<<< HEAD
 Stelace.PACKAGE_VERSION = "0.16.8";
+=======
+Stelace.PACKAGE_VERSION = "0.16.3";
+>>>>>>> 96e66b9b151d086cd6b4a4a2709c0cdff68a3a32
 Stelace.USER_AGENT_STRING = "Stelace/".concat(Stelace.PACKAGE_VERSION);
 var createInstance = function createInstance() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {

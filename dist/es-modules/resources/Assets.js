@@ -56,10 +56,13 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
+<<<<<<< HEAD
 Assets.prototype.getLabels = method({
   path: '/label',
   method: 'GET'
 });
+=======
+>>>>>>> 96e66b9b151d086cd6b4a4a2709c0cdff68a3a32
 Assets.prototype.getFunds = method({
   path: '/funds',
   method: 'GET'
