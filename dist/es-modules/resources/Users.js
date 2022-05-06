@@ -91,3 +91,23 @@ Users.prototype.deleteUserDocs = method({
   method: 'DELETE',
   urlParams: ['id']
 });
+Users.prototype.getWorkflowStep = method({
+  path: '/users/cpmvwf/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.addWorkflowStep = method({
+  path: '/users/step/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.getToVerifyDocs = method({
+  path: '/users/vdocs/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.validateDocs = method({
+  path: '/users/vdocs/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
