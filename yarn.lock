@@ -9,19 +9,18 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
-"@babel/cli@^7.0.0":
-  version "7.17.3"
-  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/@babel/cli/-/cli-7.17.3.tgz#0ccb93a348d0e3a4ff8776a63dbeefd329f7b3cc"
-  integrity sha1-DMuTo0jQ46T/h3amPb7v0yn3s8w=
+"@babel/cli@^7.17.10":
+  version "7.17.10"
+  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/@babel/cli/-/cli-7.17.10.tgz#5ea0bf6298bb78f3b59c7c06954f9bd1c79d5943"
+  integrity sha1-XqC/Ypi7ePO1nHwGlU+b0cedWUM=
   dependencies:
-    "@jridgewell/trace-mapping" "^0.3.4"
+    "@jridgewell/trace-mapping" "^0.3.8"
     commander "^4.0.1"
     convert-source-map "^1.1.0"
     fs-readdir-recursive "^1.1.0"
     glob "^7.0.0"
     make-dir "^2.1.0"
     slash "^2.0.0"
-    source-map "^0.5.0"
   optionalDependencies:
     "@nicolo-ribaudo/chokidar-2" "2.1.8-no-fsevents.3"
     chokidar "^3.4.0"
@@ -1215,10 +1214,10 @@
   resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.11.tgz#771a1d8d744eeb71b6adb35808e1a6c7b9b8c8ec"
   integrity sha1-dxodjXRO63G2rbNYCOGmx7m4yOw=
 
-"@jridgewell/trace-mapping@^0.3.0", "@jridgewell/trace-mapping@^0.3.4":
-  version "0.3.4"
-  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/@jridgewell/trace-mapping/-/trace-mapping-0.3.4.tgz#f6a0832dffd5b8a6aaa633b7d9f8e8e94c83a0c3"
-  integrity sha1-9qCDLf/VuKaqpjO32fjo6UyDoMM=
+"@jridgewell/trace-mapping@^0.3.0", "@jridgewell/trace-mapping@^0.3.8":
+  version "0.3.13"
+  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/@jridgewell/trace-mapping/-/trace-mapping-0.3.13.tgz#dcfe3e95f224c8fe97a87a5235defec999aa92ea"
+  integrity sha1-3P4+lfIkyP6XqHpSNd7+yZmqkuo=
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
