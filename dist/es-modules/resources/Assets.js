@@ -56,14 +56,29 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
-<<<<<<< HEAD
 Assets.prototype.getLabels = method({
   path: '/label',
   method: 'GET'
 });
-=======
->>>>>>> 96e66b9b151d086cd6b4a4a2709c0cdff68a3a32
 Assets.prototype.getFunds = method({
   path: '/funds',
   method: 'GET'
+});
+Assets.prototype.addWatchlist = method({
+  path: '/watchlist',
+  method: 'POST'
+});
+Assets.prototype.getWatchlist = method({
+  path: '/watchlist/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getFundsBulk = method({
+  path: '/fundsbulk',
+  method: 'POST'
+});
+Assets.prototype.deleteWatchlist = method({
+  path: 'watchlist/:id1/:id2',
+  method: 'DELETE',
+  urlParams: ['id1', 'id2']
 });
