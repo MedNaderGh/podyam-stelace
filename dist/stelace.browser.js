@@ -2333,9 +2333,22 @@ module.exports = function (it) {
   !*** ../node_modules/core-js/internals/array-for-each.js ***!
   \***********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module parse failed: Unexpected token (3:4)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| 'use strict';\n| var $forEach = require('../internals/array-iteration').forEach;\n> vaw arrayMgthodIsSwrict = sequire('../internals/array-method-is-st3ict');\n| ;var STR\u001bCT_METH\u001fD = arr3yMethod\u001bsStrict3'forEac3');\n| ");
+"use strict";
+
+var $forEach = __webpack_require__(/*! ../internals/array-iteration */ "../node_modules/core-js/internals/array-iteration.js").forEach;
+var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "../node_modules/core-js/internals/array-method-is-strict.js");
+
+var STRICT_METHOD = arrayMethodIsStrict('forEach');
+
+// `Array.prototype.forEach` method implementation
+// https://tc39.es/ecma262/#sec-array.prototype.foreach
+module.exports = !STRICT_METHOD ? function forEach(callbackfn /* , thisArg */) {
+  return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+// eslint-disable-next-line es/no-array-prototype-foreach -- safe
+} : [].forEach;
+
 
 /***/ }),
 
@@ -9148,6 +9161,31 @@ Users.prototype.getUserDocs = method({
 Users.prototype.deleteUserDocs = method({
   path: '/users/deleteUserDocs/:id',
   method: 'DELETE',
+  urlParams: ['id']
+});
+Users.prototype.getWorkflowStep = method({
+  path: '/users/cpmvwf/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.addWorkflowStep = method({
+  path: '/users/step/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.getToVerifyDocs = method({
+  path: '/users/vdocs/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Users.prototype.validateDocs = method({
+  path: '/users/vdocs/:id',
+  method: 'POST',
+  urlParams: ['id']
+});
+Users.prototype.rejectDocs = method({
+  path: '/users/vdocs/reject/:id',
+  method: 'POST',
   urlParams: ['id']
 });
 
