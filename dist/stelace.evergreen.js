@@ -5083,6 +5083,11 @@ Assets.prototype.getFundValue = method({
   method: 'GET',
   urlParams: ['id']
 });
+Assets.prototype.isverified = method({
+  path: 'isverified/:id1/:id2',
+  method: 'GET',
+  urlParams: ['id1', 'id2']
+});
 
 /***/ }),
 
