@@ -1,6 +1,6 @@
 {
   "name": "podyam_stelace",
-  "version": "0.17.8",
+  "version": "0.17.9",
   "description": "Server and front-end client for Podyam-Stelace API",
   "main": "dist/stelace.node.js",
   "module": "dist/es-modules/stelace.js",

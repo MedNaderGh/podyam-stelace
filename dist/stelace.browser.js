@@ -2333,22 +2333,9 @@ module.exports = function (it) {
   !*** ../node_modules/core-js/internals/array-for-each.js ***!
   \***********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-var $forEach = __webpack_require__(/*! ../internals/array-iteration */ "../node_modules/core-js/internals/array-iteration.js").forEach;
-var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "../node_modules/core-js/internals/array-method-is-strict.js");
-
-var STRICT_METHOD = arrayMethodIsStrict('forEach');
-
-// `Array.prototype.forEach` method implementation
-// https://tc39.es/ecma262/#sec-array.prototype.foreach
-module.exports = !STRICT_METHOD ? function forEach(callbackfn /* , thisArg */) {
-  return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-// eslint-disable-next-line es/no-array-prototype-foreach -- safe
-} : [].forEach;
-
+throw new Error("Module parse failed: Unexpected token (3:4)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| 'use strict';\n| var $forEach = require('../internals/array-iteration').forEach;\n> vaw arrayMgthodIsSwrict = sequire('../internals/array-method-is-st3ict');\n| ;var STR\u001bCT_METH\u001fD = arr3yMethod\u001bsStrict3'forEac3');\n| ");
 
 /***/ }),
 
@@ -7415,6 +7402,18 @@ Assets.prototype.getFunds = method({
   path: '/funds',
   method: 'GET'
 });
+Assets.prototype.addFunds = method({
+  path: '/funds',
+  method: 'POST'
+});
+Assets.prototype.getSectors = method({
+  path: '/economiquesecteur',
+  method: 'GET'
+});
+Assets.prototype.getLabels = method({
+  path: '/label',
+  method: 'GET'
+});
 Assets.prototype.addWatchlist = method({
   path: '/watchlist',
   method: 'POST'
@@ -7432,6 +7431,11 @@ Assets.prototype.deleteWatchlist = method({
   path: 'watchlist/:id1/:id2',
   method: 'DELETE',
   urlParams: ['id1', 'id2']
+});
+Assets.prototype.getFundValue = method({
+  path: 'fundvalue/:id',
+  method: 'GET',
+  urlParams: ['id']
 });
 
 /***/ }),
@@ -9606,7 +9610,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.17.7";
+Stelace.PACKAGE_VERSION = "0.17.9";
 Stelace.USER_AGENT_STRING = "Stelace/".concat(Stelace.PACKAGE_VERSION);
 var createInstance = function createInstance() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
