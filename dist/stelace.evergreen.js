@@ -5044,10 +5044,6 @@ Assets.prototype.getManagementmethodes = method({
   path: '/managementmethodes',
   method: 'GET'
 });
-Assets.prototype.getLabels = method({
-  path: '/label',
-  method: 'GET'
-});
 Assets.prototype.getFunds = method({
   path: '/funds',
   method: 'GET'
