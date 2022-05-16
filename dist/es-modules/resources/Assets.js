@@ -90,3 +90,8 @@ Assets.prototype.deleteWatchlist = method({
   method: 'DELETE',
   urlParams: ['id1', 'id2']
 });
+Assets.prototype.getFundValue = method({
+  path: 'fundvalue/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
