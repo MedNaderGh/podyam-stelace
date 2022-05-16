@@ -3003,15 +3003,10 @@ core-js@^2.4.0, core-js@^2.5.0:
   resolved "https://registry.npmjs.org/core-js/-/core-js-2.5.7.tgz"
   integrity sha512-RszJCAxg/PP6uzXVXL6BsxSXx/B05oJAQ2vkJRjyjrEcNVycaqOmNb5OTxZPE3xa5gwZduqza6L9JOCenh/Ecw==
 
-core-js@^3.0.0:
-  version "3.15.2"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.15.2.tgz"
-  integrity sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q==
-
-core-js@^3.20.2:
-  version "3.21.1"
-  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
-  integrity sha1-8uDdwfxD2m+QRwbo6VW8GdBqDZQ=
+core-js@^3.0.0, core-js@^3.20.2, core-js@^3.22.5:
+  version "3.22.5"
+  resolved "https://pkgs.dev.azure.com/issammhera/Podium/_packaging/podyam/npm/registry/core-js/-/core-js-3.22.5.tgz#a5f5a58e663d5c0ebb4e680cd7be37536fb2a9cf"
+  integrity sha1-pfWljmY9XA67TmgM1743U2+yqc8=
 
 core-util-is@~1.0.0:
   version "1.0.2"
