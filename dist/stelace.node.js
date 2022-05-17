@@ -4684,6 +4684,15 @@ Assets.prototype.isverified = method({
   method: 'GET',
   urlParams: ['id1', 'id2']
 });
+Assets.prototype.deleteOneWatchlist = method({
+  path: 'watchlistone/:id1/:id2',
+  method: 'DELETE',
+  urlParams: ['id1', 'id2']
+});
+Assets.prototype.addWatchlistone = method({
+  path: '/watchlistone',
+  method: 'POST'
+});
 
 /***/ }),
 
@@ -5738,7 +5747,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.17.9";
+Stelace.PACKAGE_VERSION = "0.18.3";
 Stelace.USER_AGENT_STRING = `Stelace/${Stelace.PACKAGE_VERSION}`;
 const createInstance = (...args) => {
   return new Stelace(...args);

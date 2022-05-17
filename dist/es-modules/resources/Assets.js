@@ -100,3 +100,12 @@ Assets.prototype.isverified = method({
   method: 'GET',
   urlParams: ['id1', 'id2']
 });
+Assets.prototype.deleteOneWatchlist = method({
+  path: 'watchlistone/:id1/:id2',
+  method: 'DELETE',
+  urlParams: ['id1', 'id2']
+});
+Assets.prototype.addWatchlistone = method({
+  path: '/watchlistone',
+  method: 'POST'
+});
