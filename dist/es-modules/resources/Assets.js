@@ -109,3 +109,32 @@ Assets.prototype.addWatchlistone = method({
   path: '/watchlistone',
   method: 'POST'
 });
+Assets.prototype.deleteOneWatchlist = method({
+  path: 'watchlistone/:id1/:id2',
+  method: 'DELETE',
+  urlParams: ['id1', 'id2']
+});
+Assets.prototype.getESG = method({
+  path: 'esg/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getEnvironmentalScore = method({
+  path: 'envscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getSocialScore = method({
+  path: 'socialscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getGovernanceScore = method({
+  path: 'govscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getLastFunds = method({
+  path: '/funds/last',
+  method: 'GET'
+});

@@ -4693,6 +4693,35 @@ Assets.prototype.addWatchlistone = method({
   path: '/watchlistone',
   method: 'POST'
 });
+Assets.prototype.deleteOneWatchlist = method({
+  path: 'watchlistone/:id1/:id2',
+  method: 'DELETE',
+  urlParams: ['id1', 'id2']
+});
+Assets.prototype.getESG = method({
+  path: 'esg/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getEnvironmentalScore = method({
+  path: 'envscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getSocialScore = method({
+  path: 'socialscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getGovernanceScore = method({
+  path: 'govscore/:id',
+  method: 'GET',
+  urlParams: ['id']
+});
+Assets.prototype.getLastFunds = method({
+  path: '/funds/last',
+  method: 'GET'
+});
 
 /***/ }),
 
@@ -5747,7 +5776,7 @@ Stelace.DEFAULT_PORT = 443;
 Stelace.DEFAULT_API_VERSION = null;
 Stelace.DEFAULT_TIMEOUT = 30 * 1000; // 30s
 
-Stelace.PACKAGE_VERSION = "0.18.3";
+Stelace.PACKAGE_VERSION = "0.18.5";
 Stelace.USER_AGENT_STRING = `Stelace/${Stelace.PACKAGE_VERSION}`;
 const createInstance = (...args) => {
   return new Stelace(...args);
